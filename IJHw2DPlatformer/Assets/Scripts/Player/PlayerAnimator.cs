@@ -3,8 +3,18 @@ using UnityEngine;
 [RequireComponent (typeof (Animator))]
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] Animator _animator;
-    [SerializeField] InputReader _inputReader;   
+    private const string IsJump = nameof(IsJump);
+    private const string InputX = nameof(InputX);
+    private const string InputY = nameof(InputY);
+
+    [SerializeField] private InputReader _inputReader;
+
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void OnEnable()
     {
@@ -20,14 +30,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (coordinates.y == 1)
         {
-            _animator.SetBool("IsJump", true);
+            _animator.SetBool(IsJump, true);
 
             return;
         }
 
-        _animator.SetBool("IsJump", false);
+        _animator.SetBool(IsJump, false);
 
-        _animator.SetFloat("InputX", coordinates.x);
-        _animator.SetFloat("InputY", coordinates.y);
+        _animator.SetFloat(InputX, coordinates.x);
+        _animator.SetFloat(InputY, coordinates.y);
     }
 }

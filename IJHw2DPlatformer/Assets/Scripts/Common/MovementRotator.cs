@@ -21,7 +21,9 @@ public class MovementRotator : MonoBehaviour
         }
     }
 
-    public  void TurnObject() => transform.Rotate(Vector2.up, _turnDegree);
+    public  void TurnObject() =>
+        transform.Rotate(Vector2.up, _turnDegree);
 
-    public float TurnDirection(Vector2 direction) => direction.x * _turnDirection;
+    public float TurnDirection(Vector2 direction) =>
+        direction.x * _turnDirection;
 }

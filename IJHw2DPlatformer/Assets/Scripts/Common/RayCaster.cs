@@ -16,7 +16,7 @@ public class RayCaster : MonoBehaviour
         _rayDirection = Vector2.right;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _rayDirection, _rayDistance, _layerMask);
         
