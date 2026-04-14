@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - SceneInvisibleWalls
+  - EnemyInvisibleWalls
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3120616111
+    locked: 0
+  - name: Clouds
+    uniqueID: 1522975677
+    locked: 0
+  - name: Decor
+    uniqueID: 4122645499
+    locked: 0
+  - name: Ground
+    uniqueID: 1918241505
+    locked: 0
+  - name: Characters
+    uniqueID: 723367413
     locked: 0
